@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Momentum App</title>
-    </head>
-    <body>
-        <form class="hidden" id="login-form">
-            <input 
-            required maxlength="15" 
-            type="text" 
-            placeholder="what is your name?"/>
-            <input type="submit" value="Log In" />
-        </form>
-        <h2 id="clock">00:00:00</h2>
-        <h1 id="greeting" class="hidden"></h1>
-        <form id="todo-form">
-            <input type="text" placeholder="Write a To Do and Press Enter" required>
-        </form>
-        <ul id="todo-list"></ul>
-        <div id="quote">
-            <span></span>
-            <span></span>
-        </div>
-        <div id="weather">
-            <span></span>
-            <span></span>
-        </div>
-    </body>
-    <script src="js/greeting.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum App</title>
+  </head>
+  <body>
+    <h2 id="clock">00:00:00</h2>
+    <form class="hidden" id="login-form">
+      <input
+        id="login"
+        required
+        maxlength="15"
+        type="text"
+        placeholder="what is your name?"
+        onfocus="this.placeholder=''"
+        onblur="this.placeholder='what is your name?'"
+      />
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+    <form id="todo-form">
+      <input
+        id="todo-input"
+        type="text"
+        placeholder="Write a To Do and Enter"
+        required
+        onfocus="this.placeholder=''"
+        onblur="this.placeholder='Write a To Do and Enter'"
+      />
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="weather">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div id="quote">
+      <span></span>
+    </div>
+  </body>
+  <script src="js/greeting.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/weather.js"></script>
 </html>
