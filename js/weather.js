@@ -7,11 +7,11 @@ function onGeoOk(position) {
     .then((response) => response.json())
     .then((data) => {
       const weather = document.querySelector("#weather span:first-child");
-      const temp = document.querySelector("#weather span:nth-child(2)");
-      const city = document.querySelector("#weather span:last-child");
-      weather.innerText = data.weather[0].main;
-      temp.innerText = data.main.temp + " °C";
-      city.innerText = data.name;
+      const weatherIcon = document.querySelector(".icon");
+      const weatherIconAdrs = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+      weather.innerText = `${data.weather[0].main} | ${data.main.temp} °C | ${data.name}`;
+      weatherIcon.setAttribute("src", weatherIconAdrs);
     });
 }
 
